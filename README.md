@@ -1,2 +1,1 @@
-# TAML
-Toy Assembly Language 
+# Toy Assembly Language (TAML)
