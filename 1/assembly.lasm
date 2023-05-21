@@ -1,0 +1,5 @@
+mov: ax, 30 ; Storing 1 into regiser ax
+str: 0x0, ax ; Storing the the data in register ax into the adress 0x0 in RAM 
+
+xor: ax, ax ; Clearing regiser
+ldr: bx, 0x0 ; Loading the data from adress 0x0 in ram into register bx
