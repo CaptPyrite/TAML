@@ -60,9 +60,9 @@ with open(file, "r") as File:
         registers[d2] = registers[d1]
       else:
         try:
-          registers[d1] = bin(int(d2) & 0xFF)[2:].zfill(64)
+          registers[d1] = bin(int(d2) & 0xFF)[2:].zfill(Cache_size)
         except:
-          registers[d1] = ''.join(['{0:08b}'.format(ord(char)) for char in d2]).replace(" ", "").zfill(64)
+          registers[d1] = ''.join(['{0:08b}'.format(ord(char)) for char in d2]).replace(" ", "").zfill(Cache_size)
 
     elif parseln[0] in ("and", "or", "xor"):
       d1 = parseln[parseln.index(":") + 1]
@@ -77,7 +77,7 @@ with open(file, "r") as File:
       d2 = parseln[parseln.index(d1) + 2]
       
       if parseln[0] =="ldr":
-        registers[d1] = "".join([str(b) for b in RAM[d2]]).zfill(64)
+        registers[d1] = "".join([str(b) for b in RAM[d2]]).zfill(Cache_size)
       else:
         RAM[d1] = registers[d2]
 
