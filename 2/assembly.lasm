@@ -1,0 +1,11 @@
+section .data:
+  hello_world db "Hello, World!"
+  thirty dd 30
+  
+section .text:
+  global _start
+
+_start:
+  mov: $thirty, eax
+  mov: eax, esi
+  mov: $hello_world, edi
