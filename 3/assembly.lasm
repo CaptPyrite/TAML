@@ -1,0 +1,14 @@
+.data:
+  hello_world db "Hello, World!"
+  thirty dd 30
+  fourty dd 40
+
+.global: _main
+
+_main:
+  mov $thirty, eax
+  mov $fourty, ebx
+  add eax, eax, eax
+  sub eax, ebx, ecx
+
+  call %0x80, ecx
